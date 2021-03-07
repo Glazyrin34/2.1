@@ -55,7 +55,7 @@ function getAverageScore(data) {
         averageScore[key] = getAverageMark(data[key]);
         objectLength++;
     }
-    console.log(objectLength);
+
     averageScore.average = (Object.values(averageScore).reduce((a, b) => a + b)) / objectLength;
 
     return averageScore;
@@ -73,6 +73,7 @@ function getAverageMark(marks) {
     }
 
     let averageSum = sum / marks.length;
+    
     return averageSum;
 }
 
