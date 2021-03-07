@@ -55,6 +55,9 @@ function getAverageScore(data) {
         averageScore[key] = getAverageMark(data[key]);
         objectLength++;
     }
+    if (objectLength === 0) {
+        return averageScore.average = 0;
+    }
 
     averageScore.average = (Object.values(averageScore).reduce((a, b) => a + b)) / objectLength;
 
@@ -78,6 +81,6 @@ function getAverageMark(marks) {
 }
 
 console.log(getAverageScore({geometry: [2, 4, 5],
-algebra: [2,4,5,2,3,4],
-russian: [3,3,4,5],
-physics:[5,5]}));
+    algebra: [2,4,5,2,3,4],
+    russian: [3,3,4,5],
+    physics:[5,5]}));
